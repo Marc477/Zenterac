@@ -1,0 +1,225 @@
+
+/*** VIDEO CONTROLS CSS ***/
+/* control holder */
+.zen_ctrl_control{
+	background:#333;
+	color:#ccc;
+	position:absolute;
+	left:0;
+	width:100%;
+	z-index:10;
+}
+/* control top part */
+.zen_ctrl_topControl{
+    display: none;
+	height:11px;
+	border-bottom:1px solid #404040;
+	padding:1px 5px;
+	background:#1F1F1F; /* fallback */
+	background:-moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background:-webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background:-o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+/* control bottom part */
+.zen_ctrl_btmControl{
+	clear:both;
+    position: relative;
+	background: #1F1F1F; /* fallback */
+	background:-moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background:-webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background:-o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+.zen_ctrl_control div.zen_ctrl_btn {
+	float:left;
+	width:34px;
+	height:30px;
+	padding:0 5px;
+	border-right:1px solid #404040;
+	cursor:pointer;
+}
+.zen_ctrl_control div.zen_ctrl_text{
+	font-size:12px;
+	font-weight:bold;
+	line-height:30px;
+	text-align:center;
+	font-family:verdana;
+	width:20px;
+	border:none;
+	color:#777;
+}
+.zen_ctrl_control div.zen_ctrl_btnPlay{
+	background:url(images/control.png) no-repeat 0 0;
+	border-left:1px solid #404040;
+}
+.zen_ctrl_control div.zen_ctrl_btnRestart{
+	background:url(images/restart.png) no-repeat 0 0;
+	border-left:1px solid #404040;
+}
+.zen_ctrl_control div.zen_ctrl_btnNext{
+	background:url(images/next.png) no-repeat 0 0;
+	border-left:1px solid #404040;
+}
+.zen_ctrl_control div.zen_ctrl_paused{
+	background:url(images/control.png) no-repeat 0 -30px;
+}
+.zen_ctrl_control div.zen_ctrl_btnStop{
+	background:url(images/control.png) no-repeat 0 -60px;
+}
+.zen_ctrl_control div.zen_ctrl_spdText{
+	border:none;
+	font-size:14px;
+	line-height:30px;
+	font-style:italic;
+}
+.zen_ctrl_control div.zen_ctrl_selected{
+	font-size:15px;
+	color:#ccc;
+}
+.zen_ctrl_control div.zen_ctrl_sound{
+	background:url(images/control.png) no-repeat -88px -30px;
+	border:none;
+	float:right;
+}
+.zen_ctrl_control div.zen_ctrl_sound2{
+	background:url(images/control.png) no-repeat -88px -60px !important;
+}
+.zen_ctrl_control div.zen_ctrl_muted{
+	background:url(images/control.png) no-repeat -88px 0 !important;
+}
+.zen_ctrl_control div.zen_ctrl_btnFS{
+	background:url(images/control.png) no-repeat -44px 0;
+	float:right;
+}
+.zen_ctrl_control div.zen_ctrl_btnRS{
+	background:url(images/regular-screen.png) no-repeat 0 0;
+	float:right;
+}
+.zen_ctrl_control div.zen_ctrl_btnLight{
+	background:url(images/control.png) no-repeat -44px -60px;
+	border-left:1px solid #404040;
+	float:right;
+}
+.zen_ctrl_control div.zen_ctrl_lighton{
+	background:url(images/control.png) no-repeat -44px -30px !important;
+}
+
+/* PROGRESS BAR CSS */
+/* Progress bar */
+.zen_ctrl_progress {
+	width:85%;
+	height:10px;
+	position:relative;
+	float:left;
+	cursor:pointer;
+	background: #444; /* fallback */
+	background:-moz-linear-gradient(top,#666,#333);
+	background:-webkit-linear-gradient(top,#666,#333);
+	background:-o-linear-gradient(top,#666,#333);
+	box-shadow:0 2px 3px #333 inset;
+	-moz-box-shadow:0 2px 3px #333 inset;
+	-webkit-box-shadow:0 2px 3px #333 inset;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+.zen_ctrl_progress span {
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+.zen_ctrl_timeBar{
+	z-index:10;
+	width:0;
+	background: #3FB7FC; /* fallback */
+	background:-moz-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+	background:-webkit-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+	background:-o-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+	box-shadow:0 0 1px #fff;
+	-moz-box-shadow:0 0 1px #fff;
+	-webkit-box-shadow:0 0 1px #fff;
+}
+.zen_ctrl_bufferBar{
+	z-index:5;
+	width:0;
+	background: #777;
+	background:-moz-linear-gradient(top,#999,#666);
+	background:-webkit-linear-gradient(top,#999,#666);
+	background:-o-linear-gradient(top,#999,#666);
+	box-shadow:2px 0 5px #333;
+	-moz-box-shadow:2px 0 5px #333;
+	-webkit-box-shadow:2px 0 5px #333;
+}
+/* time and duration */
+.zen_ctrl_time{
+	width:15%;
+	float:right;
+	text-align:center;
+	font-size:11px;
+	line-height:12px;
+}
+
+/* VOLUME BAR CSS */
+/* volume bar */
+.zen_ctrl_volume{
+	position:relative;
+	cursor:pointer;
+	width:80px;
+	height:10px;
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}
+.zen_ctrl_volumeBar{
+	display:block;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#eee;
+	z-index:10;
+}
+
+.zen_ctrl_seek{
+	position:relative;
+	cursor:pointer;
+	width:50%;
+	height:10px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+        background-color:#555;
+}
+.zen_ctrl_seekBar{
+	display:block;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#eee;
+	z-index:10;
+}
+
+.zen_ctrl_quality{
+	position:relative;
+	cursor:pointer;
+	width:50px;
+	float:right;
+	margin-top:5px;
+        background: #333;
+        border: 0;
+        color: white;
+        outline: none;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+}
+
+.zen_ctrl_quality > option{
+    background-color: #222;
+    outline: none
+}
