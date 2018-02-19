@@ -36,7 +36,7 @@ player.autoplay = true;
 player.volume = 1.0;
 ```
 
-**Use multiSegments.** Player will load multiple video at the same time. Uses more memory and CPU but makes transitions shorter.  Default: true except safari and IOS
+**Use multiSegments.** Player will use multiple buffers to store loaded videos. Uses more memory and CPU but makes transitions shorter.  Default: true except safari and IOS
 ```
 player.useMultiSegment = true;
 ```
