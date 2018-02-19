@@ -11,7 +11,7 @@ Zenterac.debug = false;
  * @type Number
  * @const
  */
-Zenterac.version = "1.04";
+Zenterac.version = "2.01";
 
 /**
  * Server hosting the videos
@@ -24,25 +24,18 @@ Zenterac.server = "//api.zenterac.com";
 /** @function create
  * @memberof Zenterac
  * @desc Main function to create a new video player
- * @param {string} user - The ID of the user
  * @param {string} divID - The ID of the div where the video will be displayed
  * @return {Zenterac.VideoPlayer} A VideoPlayer
  * @example Zenterac.create('demo', 'vframe');
  */
-Zenterac.create = function(user, divID){
+Zenterac.create = function(divID, user){
     
     //Check input
-    if( divID && typeof user !== "string" )
-         throw "First parameter of Zenterac.create must be a user name (string)";
-    
     if( divID && typeof divID !== "string" && typeof divID !== "object" )
-        throw "Second parameter of Zenterac.create must be a string or div";
-     
-    if( !divID && typeof user !== "string" && typeof user !== "object" )
         throw "First parameter of Zenterac.create must be a string or div";
     
-    var aDiv = divID || user;
-    var aUser = (divID) ? user : null;
+    var aDiv = divID || "";
+    var aUser = user || null;
     
     //Find div in document
     var divTag = null;

@@ -172,7 +172,7 @@ Zenterac.VideoPlayer = function(divTag){
     this.switchOffset = 0.1;
     this.seenPercent = 0.3;
     this.isFullScreen = false;
-    this.useCustomServer = false;
+    this.useCustomServer = true;
     
     //Engine
     this.engine = null;
