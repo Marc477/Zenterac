@@ -1,7 +1,7 @@
 # Zenterac
 HTML5 Interactive Video Player
 
-Zenterac is an open-source interactive video player that allows you to create customized interactive video projects that can be easily integrated on your website. Projects are built using html, javascript and the zenterac api.
+Zenterac is an open-source interactive video player that allows you to create customized interactive projects. It can be easily integrated on your websites. Projects are built using html, javascript and the zenterac api.
 
 ## Project built with Zenterac
 Here is a interactive story made with Zenterac
