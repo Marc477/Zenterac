@@ -19,7 +19,7 @@ Then, visit: http://zenterac.madesbiens.ca/ to learn how to create your first Ze
 var player = Zenterac.create( 'vframe' ); 
 ```
 
-**Play/Pause player **
+**Play/Pause player**
 ```
 player.play();
 player.pause();
@@ -33,7 +33,7 @@ player.autoplay = true;
 
 **Set volume between 0 and 1**
 ```
-player.volume = 1;
+player.volume = 1.0;
 ```
 
 **Use multiSegments.** Player will load multiple video at the same time. Uses more memory and CPU but makes transitions shorter.  Default: true except safari and IOS
@@ -68,6 +68,23 @@ end
 player.on('start', function(){
     player.play(playlist);
 });
+```
+
+### Video
+```
+var bunny = new Zenterac.Video('bunny', {...options...});
+```
+
+**List of video options**
+url: url of the video (required)
+start: start time in seconds
+duration: video duration
+playMode: ("all", "seen", "unseen" or "loop"), "loop" is great for looping on a video while waiting for user input
+
+### Playlist
+```
+var playlist = new Zenterac.Playlist(video1, video2, video3);
+player.play(playlist);
 ```
 
 ## More to come
