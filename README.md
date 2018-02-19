@@ -29,7 +29,6 @@ player.play(video);
 **How to start the player**
 ```
 var player = Zenterac.create( 'vframe' );
-player.usePreloading = true;
 var bunny = new Zenterac.Video('bunny', {url: "/bunny.mp4"});
 player.on('start', function(){
     player.play(bunny);
