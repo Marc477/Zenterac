@@ -26,6 +26,16 @@ player.pause();
 player.play(video);
 ```
 
+**How to start the player**
+```
+var player = Zenterac.create( 'vframe' );
+player.usePreloading = true;
+var bunny = new Zenterac.Video('bunny', {url: "/bunny.mp4"});
+player.on('start', function(){
+    player.play(bunny);
+});
+```
+
 **Autoplay when page load**
 ```
 player.autoplay = true;
@@ -68,6 +78,13 @@ end
 player.on('start', function(){
     player.play(playlist);
 });
+```
+
+### Show/hide UI
+List of UI to show/hide  
+"play", "restart", "next", "fullscreen", "controls", "loading", "logo"
+```
+player.UI.show('next');
 ```
 
 ### Video
