@@ -73,6 +73,7 @@ player.on('start', function(){
 ### Video
 ```
 var bunny = new Zenterac.Video('bunny', {...options...});
+var bunny = new Zenterac.Video('bunny', {start: 5, duration: 12, url: video_host + "bunny.mp4"});
 ```
 
 **List of video options**  
