@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo ZenTerac</title>
+  <title>Zenterac Project Title</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Zenterac interactive video">
+  <meta name="keywords" content="Zenterac,interactive,video">
+  <meta http-equiv="X-Frame-Options" content="sameorigin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
+  
   <link href="zenterac/zenterac.css" rel="stylesheet" type="text/css" />
   <script src="zenterac/zenterac.js"></script>
   
@@ -12,107 +16,41 @@
         margin: 0px;
         background-color: #CCCCCC;
     }
+
     #header{
         margin-bottom: 20px;
     }
+
     #page-content {
         width: 100%;
         text-align: center;
     }
+
     #vframe{
         margin: 0 auto;
-        max-width: 854px;
-    }
-    #buttons{
-        position: absolute;
-        margin: auto;
-        top: 85%;
-        left: 0; right: 0;
-        display: none;
+        background-color: #111111;
     }
     
   </style>
   
 </head>
-<body>
-<div id="header"></div>
-    <div id="page-content">
+<body style="padding:0; margin:0;">
+ 
+    <div id="vframe" style="max-width:1000px;"></div>
+
+    <script>
+        // 'vframe' the id of the div where the project is displayed
+        var player = Zenterac.create( 'vframe' ); 
         
-        <div id="center">
-        <div id="vframe">
-            <div id="buttons">
-                <input id="bPlay" type="button" value="Switch" />
-                <input id="bReplace" type="button" value="Replace" />
-                <input id="bInsert" type="button" value="Insert" />
-                <input id="bAppend" type="button" value="Append" />
-            </div>
-        </div>
-        </div>
+        // 'bunny' is a video ID
+        var video_host = "http://zenterac.madesbiens.ca/media/";
+        var bunny = new Zenterac.Video('bunny', {url: video_host + "bunny.mp4"}); 
         
-        <script>
-        
-            var Playlist = Zenterac.Playlist;
-            var Video = Zenterac.Video;
-            var PlayMode = Zenterac.PlayMode;
-  
-            window.onload = function() {
-            
-                var player = Zenterac.create( 'vframe' );
-                //player.UI.show('next'); //show next button in UI
-                //player.UI.hide('restart'); //hide restart button in UI
-                
-                //------ VIDEOS & PLAYLISTS ------------
-                var video_host = "http://zenterac.madesbiens.ca/media/";
-                var bunny = new Video('bunny', {duration: 12, url: video_host + "bunny.mp4"});
-                var elephant = new Video('elephant', {url: video_host + "elephant.mp4"});
-                var sintel = new Video('sintel', {start: 5, duration: 10, url: video_host + "sintel.mp4"});
-                
-                var playlist = new Playlist(bunny, elephant);
-                
-                //------ EVENTS ------------
-                //Fired when a new session is created or when the player restart
-                player.on('start', function(){
-                    player.play(playlist);
-                    player.preload(sintel); //Preload sintel now, for faster switching
-                });
-                
-                //Fired when player is ready to play
-                player.on('ready', function(){
-                    document.getElementById("buttons").style.display = "none"; //Hide buttons
-                });
-                
-                //Fired when player restarts
-                player.on('restart', function(){
-                    document.getElementById("buttons").style.display = "none"; //Hide buttons
-                });
-                
-                //Fired when bunny reaches 1 seconds
-                player.onTime(bunny, 1, function(){
-                    document.getElementById("buttons").style.display = "block"; //Show buttons
-                });
-                
-                //------ BUTTONS ------------
-                document.getElementById('bPlay').onclick = function(){
-                    player.play(sintel); //Play video now! (Alias for replace() + next())
-                };
-                
-                document.getElementById('bReplace').onclick = function(){
-                    player.replace(sintel); //Replace all remaining videos by this one
-                    player.next(); //Switch to next video
-                };
-                
-                document.getElementById('bInsert').onclick = function(){
-                    player.insert(elephant); //Insert video before all remaining videos in the playlist
-                    player.next(); //Switch to next video
-                };
-                
-                document.getElementById('bAppend').onclick = function(){
-                    player.append(elephant); //Append this video to the end of the playlist
-                    player.next(); //Switch to next video
-                };
-            };
-        
-        </script>
-    </div>
+        player.on('start', function(){
+            player.play(bunny);
+        });
+    </script>
+
+
 </body>
 </html>
