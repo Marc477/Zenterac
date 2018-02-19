@@ -104,5 +104,9 @@ var playlist = new Zenterac.Playlist(video1, video2, video3);
 player.play(playlist);
 ```
 
+## Demos
+Check our demo to get started faster on your project!
+http://zenterac.madesbiens.ca/
+
 ## More to come
 More information on how to use it will be added here soon.
