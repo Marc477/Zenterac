@@ -55,14 +55,14 @@ player.height
 player.width
 ```
 
-**List of events:** __
-init__
-ready__
-start__
-restart__
-switch__
-timeupdate__
-end__
+**List of events:**  
+init  
+ready  
+start  
+restart  
+switch  
+timeupdate  
+end  
 
 ```
 player.on('start', function(){
@@ -75,11 +75,11 @@ player.on('start', function(){
 var bunny = new Zenterac.Video('bunny', {...options...});
 ```
 
-**List of video options** __
-url: url of the video (required)__
-start: start time in seconds__
-duration: video duration__
-playMode: ("all", "seen", "unseen" or "loop"), "loop" is great for looping on a video while waiting for user input__
+**List of video options**  
+url: url of the video (required)  
+start: start time in seconds  
+duration: video duration  
+playMode: ("all", "seen", "unseen" or "loop"), "loop" is great for looping on a video while waiting for user input  
 
 ### Playlist
 ```
