@@ -81,7 +81,7 @@ player.on('start', function(){
 
 ### Show/hide UI
 List of UI to show/hide  
-"play", "restart", "next", "fullscreen", "controls", "loading", "logo"
+"play", "restart", "next", "seek", "fullscreen", "controls", "loading", "logo"
 ```
 player.UI.show('next');
 ```
