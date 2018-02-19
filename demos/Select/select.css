@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    background-color: #CCCCCC;
+}
+#header{
+    margin-bottom: 20px;
+}
+#page-content {
+    width: 100%;
+    text-align: center;
+}
+#vframe {
+    max-width: 960px;
+    background-color: #111111;
+    margin: 0 auto;
+}
+
+.vClear{
+    clear: both;
+    height: 50px;
+}
+
+#buttons, #buttons2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.zone{
+    float:left;
+    position: relative;
+    width: 50%;
+    height: 42%;
+    margin: 2% 0;
+    cursor: pointer;
+}
+
+.counter{
+    position: relative;
+    height: 100%;
+    width: 40px;
+    float:left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.counterR{
+    position: relative;
+    height: 100%;
+    width: 40px;
+    float:right;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.bottomAlign{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.cValue{
+    height: 16px;
+    width: 20px;
+    margin: 2px 0;
+    float: left;
+}
+
+.peopleIcon{
+    background: url('img/people.png');
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.line{
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+}
