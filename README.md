@@ -105,7 +105,7 @@ player.play(playlist);
 ```
 
 ## Demos
-Check our demo to get started faster on your project!
+Check our demos to get started faster on your project!
 http://zenterac.madesbiens.ca/
 
 ## More to come
