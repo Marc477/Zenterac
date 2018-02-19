@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo ZenTerac: Iframe</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <style>
+    body{
+        margin: 0px;
+        background-color: #CCCCCC;
+    }
+    #header{
+        margin-bottom: 20px;
+    }
+    #page-content {
+        width: 100%;
+        text-align: center;
+    }
+  </style>
+  
+</head>
+<body>
+<div id="header"></div>
+    <div id="page-content">
+    
+        <div id='zen-video-container' style='margin:auto; min-width:300px; max-width:854px;' >
+            <div style='position:relative;padding-bottom:56.25%;padding-top:30px;height:0;background:#111;overflow:hidden;'>
+                <iframe id='zen-video-iframe' src='iframe-inner.html'
+                    onload='if(this.src.indexOf(window.location.hash) < 0){this.src += window.location.hash;}'
+                    style='position:absolute; top:0; left:0; width:100%; height:100%;'
+                    frameborder='0' scrolling='no' allowfullscreen >
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="vClear"></div>
+        
+    </div>
+</body>
+</html>

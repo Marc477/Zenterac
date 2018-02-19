@@ -1,0 +1,50 @@
+body{
+    margin: 0px;
+    background-color: #CCCCCC;
+}
+#header{
+    margin-bottom: 20px;
+}
+#page-content {
+    width: 100%;
+    text-align: center;
+}
+#vframe {
+    width: 854px;
+    height: 480px;
+    background-color: #111111;
+    margin: 0 auto;
+}
+
+.vClear{
+    clear: both;
+    height: 50px;
+}
+
+#buttons{
+    position: relative;
+}
+
+#c1{
+    position: absolute;
+    top: 330px;
+    left: 240px;
+    width: 100px;
+    height: 100px;
+}
+
+#c2{
+    position: absolute;
+    top: 330px;
+    left: 390px;
+    width: 100px;
+    height: 100px;
+}
+
+#c3{
+    position: absolute;
+    top: 330px;
+    left: 540px;
+    width: 100px;
+    height: 100px;
+}
